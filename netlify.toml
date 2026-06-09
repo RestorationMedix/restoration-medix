@@ -1,0 +1,15 @@
+# Netlify config for restorationmedix.com
+# The deploy root is this folder (the .git repo lives here), so paths are
+# relative to it.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Pretty path for the lead proxy: the site posts to /api/submit-lead,
+# which Netlify rewrites (status 200 = rewrite, not redirect) to the
+# function. No _redirects rule matches /api/*, so this is the only handler.
+[[redirects]]
+  from = "/api/submit-lead"
+  to = "/.netlify/functions/submit-lead"
+  status = 200
