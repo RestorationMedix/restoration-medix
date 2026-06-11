@@ -32,3 +32,8 @@
 /services/reconstruction.html   /reconstruction/   301
 /services/remodeling.html   /remodeling/   301
 /services/roofing.html   /roofing/   301
+
+# Legal pages: .html paths -> clean URLs
+/privacy-policy.html   /privacy-policy/   301
+/terms-of-service.html   /terms-of-service/   301
+/disclaimer.html   /disclaimer/   301
